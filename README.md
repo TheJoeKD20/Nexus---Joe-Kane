@@ -26,6 +26,15 @@
   <img src="https://nexus.joekane.org/assets/shots/hero.webp" alt="The Nexus wallboard" width="880" />
 </p>
 
+<p align="center">
+  <a href="https://nexus.joekane.org">Website</a> ·
+  <a href="https://nexus.joekane.org/docs">Docs</a> ·
+  <a href="https://nexus.joekane.org/pricing">Pricing</a> ·
+  <a href="https://nexus.joekane.org/releases">Download</a> ·
+  <a href="https://nexus.joekane.org/changelog">Changelog</a> ·
+  <a href="https://nexus.joekane.org/security">Security</a>
+</p>
+
 ---
 
 ## What is Nexus?
