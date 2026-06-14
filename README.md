@@ -30,28 +30,28 @@
 
 ## What is Nexus?
 
-Nexus turns your help desk into a **real-time wallboard** for the whole team — the kind that belongs on a TV across the office, on the desktop, or in your pocket. It reads the help desk you already [...]
+Nexus turns your help desk into a **real-time wallboard** for the whole team — the kind that belongs on a TV across the office, on the desktop, or in your pocket. It reads the help desk you already run — Zendesk, Freshdesk, Freshservice, Jira Service Management or HaloPSA — and turns the numbers that matter into big, glanceable panels that update live: first response, SLAs at risk, CSAT, who's on, and what's still unassigned.
 
-It's **self-hosted**. The server runs in *your* environment (Docker, a VPS, Plesk — wherever) and talks to your help desk from there; your customer data is processed on your own infrastructure and i[...]
+It's **self-hosted**. The server runs in *your* environment (Docker, a VPS, Plesk — wherever) and talks to your help desk from there; your customer data is processed on your own infrastructure and never sent to us. API keys are encrypted at rest (DPAPI on Windows, AES-256-GCM elsewhere), outbound requests are SSRF-guarded, and the container runs as non-root. Your data never leaves your server.
 
 ## Highlights
 
-- 📺 **Built for the wall** — a TV-first board that fills **any** screen, portrait or ultrawide, with a kiosk/TV mode and per-screen rotation.
+- 📺 **Built for the wall** — a TV-first board that fills **any** screen, portrait or ultrawide, edge to edge, with a kiosk/TV mode and per-screen rotation.
 - 🔌 **Multi-provider** — Zendesk (Support + Talk), plus Freshdesk, Freshservice, Jira Service Management and HaloPSA *(beta)*. One board, whichever desk you run.
 - 🧩 **Panels & KPIs you arrange** — drag, resize and theme a wall of live panels; layout presets and multiple boards.
-- 🎨 **Themes & looks** — nine themes and four surface "looks" (Flat, Glass, Elevated, Contrast), previewed before you pick.
+- 🎨 **Themes & looks** — eleven themes (plus a custom palette) and five surface "looks" (Classic, Flat, Glass, Elevated, Contrast), previewed before you pick and mixable per screen or per board.
 - 🖥️ **Screen Sync** — name your screens and push a board or a message to every TV at once from one place.
 - 🔐 **Yours to lock down** — view passcode, scoped access links, an admin token, SSO/VPN-friendly. Read access is unauthenticated by design for trusted LANs.
 - 🤖 **AI daily summary** *(optional)* — a plain-language read of the day, using your own LLM key.
-- 🛰️ **Switchboard** *(closed-beta add-on)* — auto-routes unassigned tickets to the right engineer. See [the Switchboard repo](https://nexus.joekane.org/switchboard).
+- 🛰️ **Switchboard** *(closed-beta add-on)* — auto-routes unassigned tickets to the right engineer. See [the Switchboard page](https://nexus.joekane.org/switchboard).
 
 ## A look around
 
 | | |
 |---|---|
-| <img src="https://nexus.joekane.org/assets/shots/board-tickets.webp" width="420" alt="Ticket panels" /> | <img src="https://nexus.joekane.org/assets/shots/board-sla.webp" width="420" alt="SLA war-ro[...]
+| <img src="https://nexus.joekane.org/assets/shots/board-tickets.webp" width="420" alt="Ticket panels" /> | <img src="https://nexus.joekane.org/assets/shots/board-sla.webp" width="420" alt="SLA war-room" /> |
 | **Live ticket & talk panels** — first response, CSAT, unassigned, agent status. | **SLA war-room** — what's at risk, right now. |
-| <img src="https://nexus.joekane.org/assets/shots/agent-drilldown.webp" width="420" alt="Agent drill-down" /> | <img src="https://nexus.joekane.org/assets/shots/tvmode.webp" width="420" alt="TV mode"[...]
+| <img src="https://nexus.joekane.org/assets/shots/agent-drilldown.webp" width="420" alt="Agent drill-down" /> | <img src="https://nexus.joekane.org/assets/shots/tvmode.webp" width="420" alt="TV mode" /> |
 | **Agent drill-down** — tap a name for the detail. | **TV mode** — rotating, room-readable slides. |
 
 ### Pick a look
@@ -98,11 +98,11 @@ The first launch walks you through a **setup wizard** (connect a provider, or tr
 
 ## Licensing, honestly
 
-Nexus is a paid product (Starter / Pro / Enterprise). Licences verify **offline** with a bundled Ed25519 public key — the board renders with no phone-home; a light heartbeat just confirms the subscr[...]
+Nexus is a paid product (Starter / Pro / Enterprise). Licences verify **offline** with a bundled Ed25519 public key — the board renders with no phone-home, so an outage never bricks your screens. Subscribe through Stripe and your licence renews itself each billing period. The only telemetry is a minimal, opt-out heartbeat — licence id, version, plan, provider and an optional instance name, and nothing else — that confirms the subscription is live and lets a screen know when an update is ready. It's described in full in **Settings → Licence** and on the [security page](https://nexus.joekane.org/security).
 
 ## Switchboard — auto-routing
 
-Where a ticket *should* go is a question Nexus can answer. **[Switchboard](https://nexus.joekane.org/switchboard)** is a private, closed-beta add-on that matches each unassigned ticket to the right en[...]
+Where a ticket *should* go is a question Nexus can answer. **[Switchboard](https://nexus.joekane.org/switchboard)** is a private, closed-beta add-on that matches each unassigned ticket to the right engineer — by **specialism**, **who's actually free**, and **current load** — then either recommends the assignment or writes it straight back to your help desk. It's **deterministic and explainable**, stays hidden unless your licence carries the entitlement, and lives both as a console and as a live panel on the wall.
 
 <p align="center">
   <img src="https://nexus.joekane.org/assets/shots/switchboard-panel.webp" width="760" alt="The Switchboard live-feed panel on the wallboard" />
